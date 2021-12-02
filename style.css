@@ -1,0 +1,89 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+h3:first-child {
+    margin-top: 0px;
+}
+
+.layout-container {
+    padding-left: 6%;
+    padding-right: 6%;
+}
+
+.layout-row {
+    width: 100%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.site-headerlogo {
+    width: 10px;
+    height: 10px;
+}
+
+.site-header {
+    margin-bottom: 50px;
+}
+
+.formimage {
+    display: block;
+    width: 100%;
+}
+
+.formitemsContainer {
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.10);
+    margin-bottom: 50px;
+}
+
+.formcard {
+    padding: 4%;
+}
+
+.formitem {
+    margin-bottom: 0.5rem;
+}
+
+.formbutton {
+    margin-top: 0.5rem;
+}
+
+.charactersitemContainer {
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.10);
+    margin-bottom: 50px;
+}
+
+.charactersimage {
+    width: 100%;
+}
+
+.charactersinfo {
+    padding: 8%;
+}
+
+.charactersattribute {
+    margin-bottom: 0.5rem;
+}
+
+@media screen and (min-width: 700px) {
+    .charactersitems {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .charactersitemContainer {
+        margin-right: 50px;
+        width: calc((100% - 50px) / 2);
+    }
+
+    .characters__itemContainer:nth-child(even) {
+        margin-right: 0px;
+    }
+}
