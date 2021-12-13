@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `orders`
+-- Table structure for table `characters`
 --
 
 CREATE TABLE `characters` (
@@ -38,7 +38,7 @@ CREATE TABLE `characters` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `orders`
+-- Dumping data for table `characters`
 --
 
 INSERT INTO `characters` VALUES
@@ -54,9 +54,9 @@ INSERT INTO `characters` VALUES
 --
 
 --
--- Indexes for table `orders`
+-- Indexes for table `characters`
 --
-ALTER TABLE `orders`
+ALTER TABLE `characters`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -66,7 +66,7 @@ ALTER TABLE `orders`
 --
 -- AUTO_INCREMENT for table `orders`
 --
-ALTER TABLE `orders`
+ALTER TABLE `characters`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
