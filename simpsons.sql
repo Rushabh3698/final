@@ -27,24 +27,27 @@ SET time_zone = "+00:00";
 -- Table structure for table `orders`
 --
 
-CREATE TABLE `orders` (
+CREATE TABLE `characters` (
   `id` int(11) NOT NULL,
-  `size` varchar(255) NOT NULL,
-  `topping` varchar(255) NOT NULL,
-  `quantity` int(11) NOT NULL,
-  `order_datetime` datetime NOT NULL,
-  `status` varchar(255) NOT NULL
+  `first_name` varchar(255) NOT NULL,
+  `last_name` varchar(255) NOT NULL,
+  `age` int(11) DEFAULT NULL,
+  `occupation` varchar(255) DEFAULT NULL,
+  `voiced_by` varchar(255) DEFAULT NULL,
+  `image_url` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `orders`
 --
 
-INSERT INTO `orders` (`id`, `size`, `topping`, `quantity`, `order_datetime`, `status`) VALUES
-(1, 'small', 'pepperoni', 1, '2020-11-15 14:45:16', 'complete'),
-(4, 'small', 'pepperoni', 3, '2020-11-15 15:13:31', 'pending'),
-(6, 'Small', 'pepperoni', 12, '2020-11-15 15:47:09', 'pending'),
-(7, 'Large', 'Vegetarian', 3, '2020-11-15 16:14:34', 'pending');
+INSERT INTO `characters` VALUES
+(1, 'Homer', 'Simpson', 40, 'Nuclear Safety Inspector', 'Dan Castellaneta', './images/homer.png'),
+(2, 'Marge', 'Simpson', 40, 'Homemaker', 'Julie Kavner', './images/marge.png'),
+(3, 'Bart', 'Simpson', 10, 'Student', 'Nancy Cartwright', './images/bart.png'),
+(4, 'Lisa', 'Simpson', 8, 'Student', 'Yeardley Smith', './images/lisa.png'),
+(5, 'Maggie', 'Simpson', 1, NULL, NULL, './images/maggie.png'),
+(6, 'Moe', 'Szyslak', 55, 'Bartender', NULL, './images/moe.png');
 
 --
 -- Indexes for dumped tables
