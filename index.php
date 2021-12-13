@@ -50,13 +50,9 @@
                                             <input 
                                                 id="homer" 
                                                 type="checkbox" 
-                                                name="homer" 
-                                            >                
-                                            <?php 
-                                                if(isset($_GET['homer'])){
-                                                    addMember('Homer',$familyMember);
-                                                } 
-                                            ?>                 
+                                                name="characters[]"
+                                                value = "Homer Simpson" 
+                                            >                 
                                         </li>
                                         <li class="form__item">
                                             <label for="marge">
@@ -65,13 +61,9 @@
                                             <input 
                                                 id="marge" 
                                                 type="checkbox" 
-                                                name="marge"
-                                            >               
-                                            <?php 
-                                                if(isset($_GET['marge'])){
-                                                    addMember('Marge',$familyMember);
-                                                } 
-                                            ?>                 
+                                                name="characters[]"
+                                                value = "Marge Simpson"
+                                            >                 
                                         </li>
                                         <li class="form__item">
                                             <label for="bart">
@@ -80,13 +72,9 @@
                                             <input 
                                                 id="bart" 
                                                 type="checkbox" 
-                                                name="bart"
-                                            >              
-                                            <?php 
-                                                if(isset($_GET['bart'])){
-                                                    addMember('Bart',$familyMember);
-                                                } 
-                                            ?>                  
+                                                name="characters[]"
+                                                value = "Bart Simpson"
+                                            >                  
                                         </li>
                                         <li class="form__item">
                                             <label for="lisa">
@@ -95,13 +83,9 @@
                                             <input 
                                                 id="lisa" 
                                                 type="checkbox" 
-                                                name="lisa"
-                                            >              
-                                            <?php 
-                                                if(isset($_GET['lisa'])){
-                                                    addMember('Lisa',$familyMember);
-                                                } 
-                                            ?>                  
+                                                name="characters[]"
+                                                value = "Lisa Simpson"
+                                            >                  
                                         </li>
                                         <li class="form__item">
                                             <label for="maggie">
@@ -110,28 +94,20 @@
                                             <input 
                                                 id="maggie" 
                                                 type="checkbox" 
-                                                name="maggie"
-                                            >
-                                            <?php 
-                                                if(isset($_GET['maggie'])){
-                                                    addMember('Maggie',$familyMember);
-                                                } 
-                                            ?>                                
+                                                name="characters[]"
+                                                value = "Maggie Simpson"
+                                            >                                
                                         </li>
                                         <li class="form__item">
                                             <label for="moe">
-                                                Moe 
+                                                Moe Szyslak
                                             </label>
                                             <input 
                                                 id="moe" 
                                                 type="checkbox" 
-                                                name="moe"
-                                            >  
-                                            <?php 
-                                                if(isset($_GET['moe'])){
-                                                    addMember('Moe',$familyMember);
-                                                } 
-                                            ?>                              
+                                                name="characters[]"
+                                                value = "Moe Szyslak"
+                                            >                              
                                         </li>
                                     </ul>
 
@@ -158,37 +134,3 @@
     </div>
 </body>
 </html>
-<?php
-
-function addMember($name,$family){
-    addItem($name,$family);
-}
-
-function addItem($name,$family){
-    foreach($family as $member){
-        if($name == $member['first_name']){
-            echo '
-                <li class = "characters__itemContainer">
-                    <div class = "characters__item">
-                        <img src="'.$member['image_url'].'" alt = "image" class = "characters__image">
-                        <div class = "characters__info">
-                            <h2 class = "characters__name">
-                                '.$member['first_name'].' '.$member['last_name'].'
-                            </h2>
-                            <div class = "characters__age">
-                                <b>age</b> '.$member['age'].'
-                            </div>
-                            <div class = "characters__occupation">
-                                <b>occupation</b> '.$member['occupation'].'
-                            </div>
-                            <div class = "characters__voiced_by">
-                                <b>voiced by</b> '.$member['voiced_by'].'
-                            </div>
-                        </div>
-                    </div>
-                </li>
-            ';
-        }
-    }
-}
-?>
