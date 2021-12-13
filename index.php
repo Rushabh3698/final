@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 
+    <!-- 
+        Document Details:
+        Course:         DGL-123 - PHP
+        Assignment:     Final Project
+        Filename:       index.php
+        Author:         Rushabh Patel
+    -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">

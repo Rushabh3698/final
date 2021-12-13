@@ -1,4 +1,11 @@
 <?php
+/*
+    Document Details:
+    Course:         DGL-123 - PHP
+    Assignment:     Final Project
+    Filename:       simpsons.php
+    Author:         Rushabh Patel
+*/
 $conn = mysqli_connect('localhost', 'root', '', 'simpsons_database');
 
 $jsonCharacter = file_get_contents("characters.json");
