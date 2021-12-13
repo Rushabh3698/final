@@ -51,7 +51,7 @@
                                                 id="homer" 
                                                 type="checkbox" 
                                                 name="characters[]"
-                                                value = "Homer Simpson" 
+                                                value = "Homer" 
                                             >                 
                                         </li>
                                         <li class="form__item">
@@ -62,7 +62,7 @@
                                                 id="marge" 
                                                 type="checkbox" 
                                                 name="characters[]"
-                                                value = "Marge Simpson"
+                                                value = "Marge"
                                             >                 
                                         </li>
                                         <li class="form__item">
@@ -73,7 +73,7 @@
                                                 id="bart" 
                                                 type="checkbox" 
                                                 name="characters[]"
-                                                value = "Bart Simpson"
+                                                value = "Bart"
                                             >                  
                                         </li>
                                         <li class="form__item">
@@ -84,7 +84,7 @@
                                                 id="lisa" 
                                                 type="checkbox" 
                                                 name="characters[]"
-                                                value = "Lisa Simpson"
+                                                value = "Lisa"
                                             >                  
                                         </li>
                                         <li class="form__item">
@@ -95,7 +95,7 @@
                                                 id="maggie" 
                                                 type="checkbox" 
                                                 name="characters[]"
-                                                value = "Maggie Simpson"
+                                                value = "Maggie"
                                             >                                
                                         </li>
                                         <li class="form__item">
@@ -106,7 +106,7 @@
                                                 id="moe" 
                                                 type="checkbox" 
                                                 name="characters[]"
-                                                value = "Moe Szyslak"
+                                                value = "Moe"
                                             >                              
                                         </li>
                                     </ul>
