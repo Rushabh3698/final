@@ -9,6 +9,10 @@ $characters = $_GET['characters'];
 
 if (isset($characters)){
     foreach($characters as $character){
+        createDiv($characterData[strtolower($character)]);
+        //echo ($characterData[strtolower($character)]['first_name']);
+    
+        /*
         foreach($characterData as $characterData){
             if($characterData['first_name']==$character){
                 echo '
@@ -32,10 +36,33 @@ if (isset($characters)){
                     </div>
                 </li>
             ';            }
-        }
+        }*/
     }
 }
 
+function createDiv($item){
+    echo '
+        <li class = "characters__itemContainer">
+            <div class = "characters__item">
+                <img src="'.$item['image_url'].'" alt = "image" class = "characters__image">
+                <div class = "characters__info">
+                    <h2 class = "characters__name">
+                        '.$item['first_name'].' '.$item['last_name'].'
+                    </h2>
+                    <div class = "characters__age">
+                        <b>age</b> '.$item['age'].'
+                    </div>
+                    <div class = "characters__occupation">
+                        <b>occupation</b> '.$item['occupation'].'
+                    </div>
+                    <div class = "characters__voiced_by">
+                        <b>voiced by</b> '.$item['voiced_by'].'
+                    </div>
+                </div>
+            </div>
+        </li>
+    ';  
+}
 
 /*
 function addItem($name,$family){
