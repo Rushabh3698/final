@@ -10,33 +10,6 @@ $characters = $_GET['characters'];
 if (isset($characters)){
     foreach($characters as $character){
         createDiv($characterData[strtolower($character)]);
-        //echo ($characterData[strtolower($character)]['first_name']);
-    
-        /*
-        foreach($characterData as $characterData){
-            if($characterData['first_name']==$character){
-                echo '
-                <li class = "characters__itemContainer">
-                    <div class = "characters__item">
-                        <img src="'.$characterData['image_url'].'" alt = "image" class = "characters__image">
-                        <div class = "characters__info">
-                            <h2 class = "characters__name">
-                                '.$characterData['first_name'].' '.$characterData['last_name'].'
-                            </h2>
-                            <div class = "characters__age">
-                                <b>age</b> '.$characterData['age'].'
-                            </div>
-                            <div class = "characters__occupation">
-                                <b>occupation</b> '.$characterData['occupation'].'
-                            </div>
-                            <div class = "characters__voiced_by">
-                                <b>voiced by</b> '.$characterData['voiced_by'].'
-                            </div>
-                        </div>
-                    </div>
-                </li>
-            ';            }
-        }*/
     }
 }
 
@@ -44,18 +17,18 @@ function createDiv($item){
     echo '
         <li class = "characters__itemContainer">
             <div class = "characters__item">
-                <img src="'.$item['image_url'].'" alt = "image" class = "characters__image">
+                <img class="characters__image" src="'.$item['image_url'].'" alt = "image" class = "characters__image">
                 <div class = "characters__info">
-                    <h2 class = "characters__name">
+                    <h2 class = "characters__name characters__attribute">
                         '.$item['first_name'].' '.$item['last_name'].'
                     </h2>
-                    <div class = "characters__age">
+                    <div class = "characters__age characters__attribute">
                         <b>age</b> '.$item['age'].'
                     </div>
-                    <div class = "characters__occupation">
+                    <div class = "characters__occupation characters__attribute">
                         <b>occupation</b> '.$item['occupation'].'
                     </div>
-                    <div class = "characters__voiced_by">
+                    <div class = "characters__voiced_by characters__attribute">
                         <b>voiced by</b> '.$item['voiced_by'].'
                     </div>
                 </div>
@@ -63,32 +36,3 @@ function createDiv($item){
         </li>
     ';  
 }
-
-/*
-function addItem($name,$family){
-    foreach($family as $member){
-        if($name == $member['first_name']){
-            echo '
-                <li class = "characters__itemContainer">
-                    <div class = "characters__item">
-                        <img src="'.$member['image_url'].'" alt = "image" class = "characters__image">
-                        <div class = "characters__info">
-                            <h2 class = "characters__name">
-                                '.$member['first_name'].' '.$member['last_name'].'
-                            </h2>
-                            <div class = "characters__age">
-                                <b>age</b> '.$member['age'].'
-                            </div>
-                            <div class = "characters__occupation">
-                                <b>occupation</b> '.$member['occupation'].'
-                            </div>
-                            <div class = "characters__voiced_by">
-                                <b>voiced by</b> '.$member['voiced_by'].'
-                            </div>
-                        </div>
-                    </div>
-                </li>
-            ';
-        }
-    }
-}*/
